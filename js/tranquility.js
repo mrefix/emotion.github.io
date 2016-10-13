@@ -8,7 +8,7 @@ var mapX = 0,
 // This function is needed before setup
 function preload() {
     // image is loaded from local memory. WILL ERROR IN GOOGLE CHROME
-    img = loadImage("koiArt.jpg");
+    img = loadImage("../koiArt.jpg");
 }
 
 function setup() {

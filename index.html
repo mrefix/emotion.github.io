@@ -12,11 +12,19 @@
 <body>
 
     <div>
-        something
-        <div id="p1Score"> </div>
-        <div id="p2Score"> </div>
-        <div id="canvas"> </div>
-        <div> Then something after </div>
+        <h1 align="center"> Title! </h1>
+        <table width="100%" id="table">
+            <tbody>
+                <td id="p1ScoreHTML" width="33%" align="center">
+                    <text vertical-align="top"> <b> Player 1 Score: </b> </text>
+                </td>
+                <td id="canvas" width="33%"> </td>
+                <td id="p2ScoreHTML" width="33%" align="center">
+                    <text vertical-align="top"> <b> Player 2 Score: </b> </text>
+                </td>
+            </tbody>
+        </table>
+        <text style="display:none" id="youWin"> You Win! </text>
         <div id="playAgainButton"> </div>
     </div>
 

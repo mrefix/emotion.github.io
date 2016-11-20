@@ -2,22 +2,34 @@ var ball;
 var p1;
 var p2;
 var p1Score;
+var p1ScoreDom;
 var p2Score;
+var p2ScoreDom;
 var winningScore;
 var canvas;
+var playAgainButton;
 
 function setup() {
+    p1Score = 0;
+    p1ScoreDom = createElement('td', '0');
+    p1ScoreDom.parent("p1ScoreHTML");
+    p1ScoreDom.style('display', 'table-cell');
+    p1ScoreDom.style('vertical-align', 'middle');
     canvas = createCanvas(700, 450);
-    canvas.id("canvas");
+    canvas.parent("canvas");
+    canvas.style('display', 'table-cell');
     background(0);
     ball = new Ball(width / 2, height / 2);
     p1 = new Paddle(30, 15, 70);
     p2 = new AIPaddle(width - 45, 15, 70);
-    p1Score = 0;
-    p1Score.id("p1Score");
     p2Score = 0;
-    p2Score.id("p2Score");
+    p2ScoreDom = createElement('td', '0');
+    p2ScoreDom.parent("p2ScoreHTML");
+    p2ScoreDom.style('display', 'table-cell');
+    p2ScoreDom.style('vertical-align', 'middle');
     winningScore = 10;
+    playAgainButton = createButton('Play Again?');
+    playAgainButton.style('display', 'none');
 }
 
 function draw() {
@@ -29,7 +41,9 @@ function draw() {
          *  Add "play again" button? This just could reset the 
          *  p1 and p2 scores and it would work using this code.
          */
-        document.getElementById("playAgainButton");
+        document.getElementById('youWin').style.display = "block";
+        playAgainButton.style('display', 'block');
+        playAgainButton.mousePressed(playAgain);
 
     } else if (p2Score == winningScore) {
         //display win message for player 2
@@ -37,6 +51,10 @@ function draw() {
          *  Add (or unhide) "play again" button? This just could reset the 
          *  p1 and p2 scores and it would work using this code.
          */
+        document.getElementById('youWin').style.display = "block";
+        playAgainButton.style('display', 'block');
+        playAgainButton.mousePressed(playAgain);
+
     } else {
         // nobody has won, play continues
         ball.update();
@@ -154,14 +172,14 @@ function Ball(x, y) {
         if (this.pos.x >= width) {
             //score point for player 1
             p1Score++;
-            document.getElementById("p1Score").innerHTML(p1Score);
+            p1ScoreDom.html(p1Score);
             //reset ball to center
             this.reset();
         }
         if (this.pos.x <= 0) {
             //score point for player 2
             p2Score++;
-            document.getElementById("p2Score").innerHTML(p2score);
+            p2ScoreDom.html(p2Score);
             //reset ball to center
             this.reset();
         }
@@ -195,4 +213,14 @@ function Ball(x, y) {
         //NEW!
         this.scored = false;
     }
+}
+
+function playAgain() {
+    p1Score = 0;
+    p1ScoreDom.html('0');
+    p2Score = 0;
+    p2ScoreDom.html('0');
+
+    document.getElementById("youWin").style.display = "none";
+    playAgainButton.style('display', 'none');
 }

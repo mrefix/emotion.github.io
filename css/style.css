@@ -1,0 +1,139 @@
+/* Add a gray background color and some padding to the footer */
+
+footer {
+    background-color: #f200f2;
+    padding: 25px;
+}
+
+
+/* First parallax */
+
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img1 {
+    background-image: url('../images/IAM.png');
+    min-height: 100%;
+    height: 100%;
+}
+
+.img1-text {
+    font-family: 'Libre Baskerville', serif;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 25px;
+    padding: 130px 5px;
+    margin-left: 60%;
+    margin-right: 5px;
+    font-size: 60px;
+}
+
+
+/* About section */
+
+.about {
+    color: #000000;
+}
+
+.about-container {
+    background-color: #FFFFFF;
+    min-height: 300px;
+}
+
+#about-text {
+    margin: 100px;
+    text-align: center;
+    font-family: 'Mogra', cursive;
+    font-size: 25px;
+}
+
+
+/* Second Parrallax with big quote */
+
+.parallax-text-container {
+    min-height: 1500px;
+    width: 100%;
+    position: initial !important;
+}
+
+.img2 {
+    background-image: url('../images/bokeh-lights-sunset-city.jpg');
+    min-height: 100%;
+    position: relative;
+}
+
+.img2-text {
+    font-size: 40px;
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+.dream-text {
+    background: rgba(0, 0, 0, .75);
+    border-style: solid;
+    border-color: gold;
+    border-width: 1px;
+}
+
+#dream-big {
+    position: absolute;
+    left: 5%;
+    top: 15%;
+    opacity: 0;
+    padding: 0px 5px;
+}
+
+#dream-bigger {
+    position: absolute;
+    right: 0%;
+    bottom: 50%;
+    opacity: 0;
+    padding: 0px 5px;
+}
+
+.isHidden {}
+
+
+/* Camera transition */
+
+
+/* Action!/skill section */
+
+.action-container {
+    background-color: #5e5e5e;
+    height: 500px;
+    font-family: 'Shrikhand', cursive;
+}
+
+.action {
+    text-align: left;
+    font-size: 40px;
+}
+
+.skill-row {
+    text-align: left;
+    font-size: 20px;
+    color: #4fe4f7;
+    margin: 20px 1px;
+    height: 50%;
+}
+
+.skill-container {
+    height: 100%;
+}
+
+#actionPicture {
+    background-color: black;
+    height: 100%;
+}
+
+
+/* Other */
+
+.blue-grandient {
+    background-image: url('../images/blue-gradient.jpg');
+}

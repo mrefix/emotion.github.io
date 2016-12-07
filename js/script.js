@@ -70,8 +70,6 @@ $(document).ready(function() {
         rightTriangle = $("#right-triangle"),
         leftTriangle = $("#left-triangle"),
         topTriangle = $("#top-triangle"),
-        lightVisibleTopPos = "36px",
-        lightVisibleSidePos = "-100px",
         // The lights move in both directions 100px to get out of view 
         lightTransitionDisplacement = "100px";
 
@@ -81,9 +79,9 @@ $(document).ready(function() {
         blackout.css("opacity", 1);
         $(window).scrollTop(actionContainer.offset().top);
         //move in lights
-        leftLight.animate("")
-            // apply gradient
-            // bring in triangles
+        //leftLight.animate("")
+        // apply gradient
+        // bring in triangles
         blackout.animate({ "opacity": "0" }, 2000);
     }
 

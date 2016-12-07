@@ -1,8 +1,35 @@
-/* Add a gray background color and some padding to the footer */
+/* Light Effect */
 
-footer {
-    background-color: #f200f2;
-    padding: 25px;
+#blackout {
+    position: fixed;
+    z-index: 1000;
+    background-color: black;
+    opacity: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.lightEffect {
+    position: fixed;
+    opacity: 1;
+}
+
+.light {
+    z-index: 1002;
+    width: 339px;
+    height: 305px;
+}
+
+#right-light {
+    transform: rotate(-40deg);
+    top: 36px;
+    right: -100px;
+}
+
+#left-light {
+    transform: rotate(40deg) scaleX(-1);
+    top: 36px;
+    left: -100px;
 }
 
 
@@ -30,6 +57,7 @@ footer {
     margin-left: 60%;
     margin-right: 5px;
     font-size: 60px;
+    position: relative;
 }
 
 
@@ -41,26 +69,30 @@ footer {
 
 .about-container {
     background-color: #FFFFFF;
-    min-height: 300px;
+    min-height: 500px;
+    position: relative;
 }
 
 #about-text {
-    margin: 100px;
+    margin: 0px 100px;
     text-align: center;
     font-family: 'Mogra', cursive;
     font-size: 25px;
+    position: absolute;
+    top: 35%;
 }
 
 
 /* Second Parrallax with big quote */
 
-.parallax-text-container {
+.parallax-2-text-container {
     min-height: 1500px;
     width: 100%;
     position: initial !important;
 }
 
 .img2 {
+    /*  http://wallpapersonthe.net/19897-bokeh-lights-night/  */
     background-image: url('../images/bokeh-lights-sunset-city.jpg');
     min-height: 100%;
     position: relative;
@@ -96,9 +128,6 @@ footer {
 }
 
 .isHidden {}
-
-
-/* Camera transition */
 
 
 /* Action!/skill section */

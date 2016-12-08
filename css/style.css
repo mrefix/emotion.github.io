@@ -56,12 +56,12 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-y: -20px;
 }
 
 .img1 {
     background-image: url('../images/IAM.jpg');
     height: 100vh;
+    bottom: 0;
 }
 
 .img1-text {
@@ -85,18 +85,17 @@
 
 .about-container {
     background-color: #FFFFFF;
-    min-height: 500px;
     position: relative;
+    min-height: 100vh;
 }
 
 #about-text {
-    margin: 0px 100px;
+    margin: 100px;
     padding: 5px;
     text-align: center;
     font-family: 'Mogra', cursive;
     font-size: 25px;
     position: absolute;
-    top: 35%;
     background: rgba(40, 40, 40, .2);
     border-style: outset;
     border-color: gold;

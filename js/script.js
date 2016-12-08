@@ -6,16 +6,16 @@ $(document).ready(function() {
 
     /* Prep light effect */
     $(".lightEffect").css({ "height": $(window).height() * 2, "width": $(window).width() });
+
     // Points A and B are on left light, C and D are on right light
     var A = $(window).width() * .04071050 + "," + $(window).height() * .15444617,
         B = $(window).width() * .07318282 + "," + $(window).height() * .07800312,
         C = $(window).width() * .92746113 + "," + $(window).height() * .07800312,
         D = $(window).width() * .95706883 + "," + $(window).height() * .15444617,
         // left triangle (0,0   0,height    10% of width,height   A    B    50% of width,0)
-        leftPolyPoints = "0,0 0," + $(window).height() * 2 + " " + $(window).width() / 17 + "," + $(window).height() * 2 + " " + A + " " + B + " " + $(window).width() + ",0",
+        leftPolyPoints = "0,0 0," + $(window).height() * 2 + " " + $(window).width() / 10 + "," + $(window).height() * 2 + " " + A + " " + B + " " + $(window).width() + ",0",
         // right triangle (width,0    width,height    height,90% of width     D    C    50% of width,0)
-        rightPolyPoints = $(window).width() + ",0 " + $(window).width() + "," + $(window).height() * 2 + " " + $(window).width() * 16 / 17 + "," + $(window).height() * 2 + " " + D + " " + C + $(window).width() / 2 + ",0";
-    console.log(leftPolyPoints);
+        rightPolyPoints = $(window).width() + ",0 " + $(window).width() + "," + $(window).height() * 2 + " " + $(window).width() * 9 / 10 + "," + $(window).height() * 2 + " " + D + " " + C + $(window).width() / 2 + ",0";
     $("#left-poly").attr("points", leftPolyPoints);
     $("#right-poly").attr("points", rightPolyPoints);
 
@@ -109,7 +109,6 @@ $(document).ready(function() {
             $(".lightEffect").animate({ opacity: ".7" }, 1000);
         });
         // apply gradient
-        // bring in triangles
     }
 
     function bringOutTheLightsQuick() {

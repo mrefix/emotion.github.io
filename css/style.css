@@ -11,29 +11,45 @@
 
 .lightEffect {
     position: fixed;
-    opacity: 1;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    fill: black;
+    z-index: 1002;
 }
 
 .light {
-    z-index: 1002;
+    position: fixed;
+    z-index: 1001;
     width: 339px;
     height: 305px;
+    transform-style: ease-out;
 }
 
 #right-light {
     transform: rotate(-40deg);
-    top: 36px;
-    right: -100px;
+    top: -114px;
+    right: -250px;
 }
 
 #left-light {
     transform: rotate(40deg) scaleX(-1);
-    top: 36px;
-    left: -100px;
+    top: -114px;
+    left: -250px;
 }
 
 
 /* First parallax */
+
+.gold-filter-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: gold;
+    opacity: .15;
+    height: 100%;
+    width: 100%;
+}
 
 .parallax {
     background-attachment: fixed;
@@ -75,11 +91,16 @@
 
 #about-text {
     margin: 0px 100px;
+    padding: 5px;
     text-align: center;
     font-family: 'Mogra', cursive;
     font-size: 25px;
     position: absolute;
     top: 35%;
+    background: rgba(40, 40, 40, .2);
+    border-style: outset;
+    border-color: gold;
+    border-width: 4px;
 }
 
 
@@ -133,20 +154,27 @@
 /* Action!/skill section */
 
 .action-container {
-    background-color: #5e5e5e;
-    height: 500px;
+    background-color: whitesmoke;
+    height: 100vh;
+    width: 100%;
     font-family: 'Shrikhand', cursive;
+    padding: 0;
+    margin: 0;
 }
 
 .action {
-    text-align: left;
+    position: relative;
+    top: 50%;
+    text-align: center;
     font-size: 40px;
+    font-family: 'Lato', sans-serif;
 }
 
 .skill-row {
+    height: 50%;
+    top: 50%;
     text-align: left;
     font-size: 20px;
-    color: #4fe4f7;
     margin: 20px 1px;
     height: 50%;
 }
@@ -156,13 +184,44 @@
 }
 
 #actionPicture {
-    background-color: black;
-    height: 100%;
+    background-image: url("http://placekitten.com/150/150");
+    height: 50vh;
+}
+
+.skill-cell {
+    height: 25vh;
+}
+
+
+/* Timeline */
+
+.timelineButton {
+    width: 100%;
+    height: 50px;
+    background-color: gold;
+    font-size: 18px;
+    font-family: 'Mogra', cursive;
+}
+
+.timelineButton:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+#all-types-photo {
+    height: 100vh;
+}
+
+.timeline-items-container {
+    height: 100vh;
+}
+
+.timeline-items-container img {
+    height: 50vh;
 }
 
 
 /* Other */
 
-.blue-grandient {
+.blue-gradient {
     background-image: url('../images/blue-gradient.jpg');
 }

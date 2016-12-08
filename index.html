@@ -14,25 +14,40 @@
 </head>
 
 <body>
-    <div id="blackout"></div>
-    <div id="right-triangle" class="lightEffect triangle"></div>
-    <div id="left-triangle" class="lightEffect triangle"></div>
-    <div id="top-triangle" class="lightEffect triangle"></div>
-    <img src="images/studioLightsFull.png" id="right-light" class="lightEffect light"></div>
-    <img src="images/studioLightsFull.png" id="left-light" class="lightEffect light"></div>
 
-    <div class="screen-gradient"></div>
+    <!-- Screen overlap -->
+
+    <div id="blackout"></div>
+    <!-- img from fotomelia.com -->
+    <img src="images/studioLightsFull.png" id="right-light" class="light"></div>
+    <img src="images/studioLightsFull.png" id="left-light" class="light"></div>
+    <svg id="left-shadow" class="lightEffect">
+        <polygon id="left-poly"></polygon>
+    </svg>
+    <svg id="right-shadow" class="lightEffect">
+        <polygon id="right-poly"></polygon>
+    </svg>
+
+    <!-- Parallax "I AM" -->
+
+    <div class="gold-filter-1"></div>
     <div class="parallax img1">
         <div class="parallax-text img1-text">
-            <div><b><span style="color: #4fe4f7">I AM </span> </b></div>
+            <div><b><span style="color: #ffd700">I AM </span> </b></div>
             <div> <b>IAN McCUE</b> </div>
         </div>
     </div>
 
+    <!-- About -->
+
     <div class="container-fluid bg-3 about-container">
-        <p id="about-text"> We are Immeasurably More Media! We are a team full of dreamers and storytellers. Let us help you tell your story or hire us to write one for you. We are a professional film and media production team, that creates to inspire and encourage people
-            with our content. Here at IMM, we dream big. Dream with us.</p>
+        <p id="about-text"> My name is Ian McCue and I am the lead producer and media creator of Immeasurably More Media. I graduated from Miami University (Oxford) with a degree in media and culture (film production) with a double minor in Film Studies and comparative religion.
+            I created Immeasurably More Media (IMM) because I’m a creative person who loves to tell stories through film. I have a story to tell myself, and I know everyone I meet does too. I want to help people tell those stories. I’m a dreamer who wants
+            to impact the world through my personal story and the stories of others and no matter how small that story is, I want this media company to help tell it. I was the assistant film producer for Miami University for 3 years. I have also been
+            the lead producer for many churches across Ohio.</p>
     </div>
+
+    <!-- Parallax 2 - Dream BIGGER -->
 
     <div class="parallax img2">
         <div class="parallax-2-text-container">
@@ -44,13 +59,14 @@
         <div class="fade-top-bottom small-fade"></div>
     </div>
 
+    <!-- Action and skills -->
 
-    <div class="container-fluid bg-3 action-container">
-        <h1 class="action"><b> ACTION! </b></h1>
+    <div class="action-container">
+        <h1 class="action"> ACTION!</h1>
+    </div>
+
+    <div class="container-fluid bg-3">
         <div class="skill-container row">
-            <div class="col-sm-3" id="actionPicture">
-
-            </div>
             <div class="col-sm-8">
                 <div class="row skill-row">
                     <div class="col-md-6 skill-cell">Skill 1:</div>
@@ -61,51 +77,56 @@
                     <div class="col-md-6 skill-cell">Skill 4:</div>
                 </div>
             </div>
+            <div class="col-sm-3" id="actionPicture">
+
+            </div>
         </div>
     </div>
 
+    <!-- Timeline -->
+
     <div class="container-fluid bg-3 text-right">
-        <h3>Some of my Work</h3><br>
-        <div class="row">
-            <div class="col-sm-3">
-                <p>Some text..tahfea;nvd ;afio;anvd;sa jf;dsa ;vndks;a vkdf;safjkd;sanvdfjklaj;</p>
-                <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+        <div class="row" style="padding: 5px">
+            <div class="col-xs-3">
+                <button class="timelineButton"> Writing </button>
             </div>
-            <div class="col-sm-3">
-                <p>Some text..</p>
-                <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+            <div class="col-xs-3">
+                <button class="timelineButton"> Director of Photography </button>
             </div>
-            <div class="col-sm-3">
-                <p>Some text..</p>
-                <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+            <div class="col-xs-3">
+                <button class="timelineButton"> Production Assistant </button>
             </div>
-            <div class="col-sm-3">
-                <p>Some text..</p>
-                <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+            <div class="col-xs-3">
+                <button class="timelineButton"> Editing </button>
+            </div>
+        </div>
+
+        <div id="all-types-photo" class="col-md-6">
+            <img src="http://placekitten.com/300/400" style="height:100vh;" alt="Image">
+        </div>
+        <div class="col-md-6 timeline-items-container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <img src="http://placekitten.com/100/100" class="img-responsive" style="width:100%" alt="Image">
+                </div>
+                <div class="col-sm-6">
+                    <img src="http://placekitten.com/100/100" class="img-responsive" style="width:100%" alt="Image">
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-sm-6">
+                    <img src="http://placekitten.com/100/100" class="img-responsive" style="width:100%" alt="Image">
+                </div>
+                <div class="col-sm-6">
+                    <img src="http://placekitten.com/100/100" class="img-responsive" style="width:100%" alt="Image">
+                </div>
             </div>
         </div>
     </div><br>
+    <br><br>
 
-    <div class="container-fluid bg-3 text-center">
-        <div class="row">
-            <div class="col-sm-3">
-                <p>Some text..</p>
-                <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-            </div>
-            <div class="col-sm-3">
-                <p>Some text..</p>
-                <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-            </div>
-            <div class="col-sm-3">
-                <p>Some text..</p>
-                <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-            </div>
-            <div class="col-sm-3">
-                <p>Some text..</p>
-                <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-            </div>
-        </div>
-    </div><br><br>
+    <!-- Footer -->
 
     <footer class="container-fluid text-center">
         <p>IMMEASURABLY MORE MEDIA</p>
